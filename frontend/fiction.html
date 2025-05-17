@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Fiction Books - Novel Nexus</title>
+  <link rel="icon" href="logoforbook.jpg" type="image/jpeg">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    a { text-decoration: none; color: #007bff; }
+    a:hover { text-decoration: underline; }
+    .btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    header {
+      background: #343a40;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .book {
+      display: flex;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .book img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+    .book-details {
+      flex: 1;
+      padding: 1rem;
+    }
+    .book-details h3 {
+      margin: 0 0 0.5rem;
+      color: #343a40;
+    }
+    .book-details p {
+      margin: 0.5rem 0;
+      color: #555;
+    }
+    .feedback-section {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>Fiction Books</header>
+
+<div class="container">
+  <!-- Book 1 -->
+  <div class="book">
+    <img src="b1.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Night Circus</h3>
+      <p><strong>Summary:</strong>The Night Circus is a 2011 speculative fiction novel by Erin Morgenstern. It was originally written for the annual writing competition National Novel Writing Month (NaNoWriMo) over the span of three competitions.[3] The novel has a nonlinear narrative written from multiple viewpoints.<br>The Night Circus is a phantasmagorical fairy tale set near an ahistorical Victorian London in a wandering, magical circus that is open only from sunset to sunrise. Le Cirque des Rêves (The Circus of Dreams) features exhibitions such as illusionists, fortune-tellers, and attractions that defy the laws of physics and reality. The circus has no set schedule, appearing and disappearing in random cities and towns without warning. The circus is powered by real magic, with performers frequently pulling off feats that seem impossible to spectators. In addition to showcasing the world's best magical talent, the circus acts as a sparring ground for the protégés of two powerful magicians</p>
+      <p><a href="https://www.kellread.com/blog-avenue/review-the-night-circus-by-erin-morgenstern" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Night Circus')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 2 -->
+  <div class="book">
+    <img src="b2.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Goldfinch</h3>
+      <p><strong>Summary:</strong>The Goldfinch is a novel by the American author Donna Tartt. It won the 2014 Pulitzer Prize for Fiction, among other honors.[1] Published in 2013, it was Tartt's first novel since The Little Friend in 2002.[2]<br>The Goldfinch centers on 13-year-old Theodore Decker, and the dramatic changes his life undergoes after he survives a terrorist attack at the Metropolitan Museum of Art that kills his mother and results in him coming into possession of Carel Fabritius's painting The Goldfinch.</p>
+      <p><a href="https://aminasbookshelf.com/2019/11/13/review-the-goldfinch/" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Goldfinch')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+  <div class="book">
+    <img src="b3.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Circe</h3>
+      <p><strong>Summary:</strong>Circe is a 2018 mythic fantasy novel by American writer Madeline Miller. Set during the Greek Heroic Age, it is an adaptation of various Greek myths, most notably the Odyssey, as told from the perspective of the witch Circe. The novel explores Circe's origin story and narrates Circe's encounters with mythological figures such as Hermes, the Minotaur, Jason, and Medea and ultimately, her romance with Odysseus and his son Telemachus.</p>
+      <p><a href="https://www.coffeebookandcandle.com/post/circe-book-review" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Circe')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+  <div class="book">
+    <img src="b4.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Midnight Library</h3>
+      <p><strong>Summary:</strong>The Midnight Library is a fantasy novel by Matt Haig, published on 13 August 2020 by Canongate Books.[1] It was abridged and broadcast on BBC Radio 4 over ten episodes in December 2020<br>The novel follows a 35-year-old English woman unhappy in her dead-end life who is given the opportunity to experience lives she might have had if she had made different choices.</p>
+      <p><a href="https://booksandpeonies.com/book-review-the-midnight-library-by-matt-haig/" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Midnight Library')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+  <div class="book">
+    <img src="b5.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Where the Crawdads Sing</h3>
+      <p><strong>Summary:</strong>Where the Crawdads Sing is a 2018 coming-of-age[2][3] murder mystery novel by American zoologist Delia Owens.[4] The story follows two timelines that slowly intertwine. The first timeline describes the life and adventures of a young girl named Kya as she grows up isolated in the marshes of North Carolina. The second timeline follows an investigation into the apparent murder of Chase Andrews, a local celebrity of Barkley Cove, a fictional coastal town of North Carolina</p>
+      <p><a href="https://createdtoread.com/book-review-where-the-crawdads-sing-by-delia-owens/" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Where the Crawdads Sing')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+  <div class="book">
+    <img src="b6.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Seven Husbands of Evelyn Hugo</h3>
+      <p><strong>Summary:</strong>The Seven Husbands of Evelyn Hugo is a historical drama novel by American novelist Taylor Jenkins Reid, and published by Atria Books in 2017. It tells the story of the fictional Old Hollywood star, Evelyn Hugo, who, at age 79, gives a final interview to unknown journalist, Monique Grant.<br>The novel was nominated for a Goodreads Choice Award for Best Historical Fiction in 2017</p>
+      <p><a href="https://lighthousewriters.org/blog/book-review-seven-husbands-evelyn-hugo-taylor-jenkins-reid" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Seven Husbands of Evelyn Hugo')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+  <!-- Add more books as needed -->
+</div>
+
+<script>
+  function handleFeedback(bookTitle) {
+    // Check if the user is logged in
+    const userLoggedIn = false; // Replace with actual login status logic
+    if (userLoggedIn) {
+      // Redirect to feedback form or display modal
+      alert(`Redirecting to feedback form for ${bookTitle}`);
+      window.location.href = `feedback.html?book=${encodeURIComponent(bookTitle)}`;
+    } else {
+      // Redirect to login or register page
+      alert("Please register or login to give feedback.");
+      window.location.href = "register.html";
+    }
+  }
+</script>
+
+</body>
+</html>

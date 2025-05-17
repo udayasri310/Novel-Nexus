@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Historical Books - Novel Nexus</title>
+  <link rel="icon" href="logoforbook.jpg" type="image/jpeg">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    a { text-decoration: none; color: #007bff; }
+    a:hover { text-decoration: underline; }
+    .btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    header {
+      background: #343a40;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .book {
+      display: flex;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .book img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+    .book-details {
+      flex: 1;
+      padding: 1rem;
+    }
+    .book-details h3 {
+      margin: 0 0 0.5rem;
+      color: #343a40;
+    }
+    .book-details p {
+      margin: 0.5rem 0;
+      color: #555;
+    }
+    .feedback-section {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>Historical Books</header>
+
+<div class="container">
+  <!-- Book 1 -->
+  <div class="book">
+    <img src="b13.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Book Thief</h3>
+      <p><strong>Summary:</strong> Written by Markus Zusak, this historical novel is set in Nazi Germany and follows Liesel, a young girl who finds solace in stealing books and sharing them. Narrated by Death, the story explores love, loss, and the power of words during one of history's darkest times.</p>
+      <p><a href="https://www.goodreads.com/book/show/19063.The_Book_Thief" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Book Thief')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 2 -->
+  <div class="book">
+    <img src="b14.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>All the Light We Cannot See</h3>
+      <p><strong>Summary:</strong> Written by Anthony Doerr, this Pulitzer Prize-winning novel follows the intersecting lives of a blind French girl and a young German soldier during World War II. Their lives weave together amid the horrors of war.</p>
+      <p><a href="https://www.goodreads.com/book/show/18143977-all-the-light-we-cannot-see" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('All the Light We Cannot See')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 3 -->
+  <div class="book">
+    <img src="b15.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Nightingale</h3>
+      <p><strong>Summary:</strong> Kristin Hannah's novel is set in France during World War II and tells the story of two sisters, Vianne and Isabelle, as they endure Nazi occupation and the war's impact on their lives, showcasing love, survival, and resilience.</p>
+      <p><a href="https://www.goodreads.com/book/show/21853621-the-nightingale" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Nightingale')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 4 -->
+  <div class="book">
+    <img src="b16.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Beneath a Scarlet Sky</h3>
+      <p><strong>Summary:</strong> Mark Sullivan's novel is based on the true story of Pino Lella, an Italian teenager who becomes a spy for the Allies during World War II. The book is a tale of bravery, love, and redemption in a time of chaos.</p>
+      <p><a href="https://www.goodreads.com/book/show/32487617-beneath-a-scarlet-sky" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Beneath a Scarlet Sky')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 5 -->
+  <div class="book">
+    <img src="b17.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Pillars of the Earth</h3>
+      <p><strong>Summary:</strong> Ken Follett's epic novel spans decades, chronicling the construction of a cathedral in the fictional town of Kingsbridge, England, during the 12th century. The book weaves together politics, love, and ambition in medieval times.</p>
+      <p><a href="https://www.goodreads.com/book/show/5043.The_Pillars_of_the_Earth" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Pillars of the Earth')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 6 -->
+  <div class="book">
+    <img src="b18.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>A Gentleman in Moscow</h3>
+      <p><strong>Summary:</strong> Amor Towles tells the story of Count Alexander Rostov, sentenced to house arrest in a Moscow hotel during the early Soviet era. The novel explores the Count's resilience and adaptability as he builds a life within the confines of the hotel.</p>
+      <p><a href="https://www.goodreads.com/book/show/29430012-a-gentleman-in-moscow" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('A Gentleman in Moscow')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function handleFeedback(bookTitle) {
+    // Check if the user is logged in
+    const userLoggedIn = false; // Replace with actual login status logic
+    if (userLoggedIn) {
+      // Redirect to feedback form or display modal
+      alert(`Redirecting to feedback form for ${bookTitle}`);
+      window.location.href = `feedback.html?book=${encodeURIComponent(bookTitle)}`;
+    } else {
+      // Redirect to login or register page
+      alert("Please register or login to give feedback.");
+      window.location.href = "register.html";
+    }
+  }
+</script>
+
+</body>
+</html>

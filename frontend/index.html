@@ -1,0 +1,307 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novel Nexus - Homepage</title>
+  <link rel="icon" href="logoforbook.jpg" type="image/jpeg">
+  <style>
+    /* General Styles */
+    * { box-sizing: border-box; margin: 0; padding: 0; }
+    body { 
+      background-color: rgb(198, 189, 165);
+      font-family: 'Baskerville'; 
+      margin: 0; 
+      color: #333; 
+      overflow-x: hidden; 
+    }
+    a { text-decoration: none; color: black; }
+    a:hover { color: crimson; }
+    /* Header Styles */
+    header { 
+      background: rgb(181, 133, 247); 
+      color: #fff; 
+      padding: 0.5rem 0; 
+      position: sticky; 
+      top: 0; 
+      z-index: 10;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    header div {
+      display: flex; 
+      align-items: center; 
+      justify-content: space-between; 
+      padding: 0 1rem;
+    }
+    header img {
+      height: 50px;
+      width: 50px;
+      border-radius: 50%;
+    }
+    header nav { 
+      display: flex; 
+      justify-content: center; 
+      gap: 30px; 
+    }
+    header nav a { 
+      color:rgb(255, 0, 0); 
+      font-size: 1.1rem; 
+      font-weight: bold; 
+      text-transform: uppercase; 
+    }
+    header nav a:hover{
+      color: white;
+    }
+    /* Dropdown Styles */
+    .dropdown {
+      position: relative;
+      display: inline-block;
+    }
+    .dropbtn {
+      padding: 12px 20px;
+      font-size: 1.1rem;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      font-weight: bold;
+    }
+    .dropdown-content {
+      display: none;
+      position: absolute;
+      background-color: rgb(97, 231, 97);
+      min-width: 160px;
+      box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.2);
+      z-index: 1;
+    }
+    .dropdown:hover .dropdown-content {
+      display: block;
+    }
+    .dropdown-content a {
+      color: black;
+      padding: 12px 16px;
+      text-decoration: none;
+      display: block;
+    }
+    .dropdown-content a:hover {
+      background-color: yellow;
+    }
+    /* Intro Section */
+    .intro {
+      text-align: center;
+      padding: 4rem 2rem;
+      /* background: linear-gradient(to bottom, yellow, #c3cfe2); */
+    }
+    .intro h1 {
+      font-size: 3rem;
+      color: slateblue;
+      margin-bottom: 1rem;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+    }
+    .intro p {
+      font-size: 1.4rem;
+      color: #555;
+      margin-bottom: 2rem;
+    }
+    /* Site Description */
+    .site-description {
+      text-align: center;
+      padding: 2rem 1rem;
+    }
+    .site-description h2 {
+      color: rgb(126, 139, 85);
+      font-size: 2rem;
+      margin-bottom: 1rem;
+    }
+    .site-description p {
+      font-size: 1.1rem;
+      color: #555;
+    }
+    /* Slideshow Styles */
+    .slideshow-container {
+      background: linear-gradient(135deg,rgb(225, 138, 39), #e8eaf6);
+      padding: 20px;
+      border-radius: 15px;
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.1);
+      max-width: 35%;
+      max-height: 35%;
+      margin: 3rem auto;
+      position: relative;
+    }
+    .mySlides {
+      display: none;
+      text-align: center;
+    }
+    .mySlides img {
+      width: 70%;
+      border-radius: 10px;
+    }
+    .text {
+      color: #fff;
+      font-size: 1.3rem;
+      padding: 10px;
+      position: absolute;
+      bottom: 20px;
+      left: 50%;
+      transform: translateX(-50%);
+      background: rgba(0, 0, 0, 0.6);
+      border-radius: 8px;
+    }
+    .dot-container {
+      text-align: center;
+      margin-top: 10px;
+    }
+    .dot {
+      cursor: pointer;
+      height: 15px;
+      width: 15px;
+      margin: 0 5px;
+      background-color: #bbb;
+      border-radius: 50%;
+      display: inline-block;
+      transition: background-color 0.6s ease;
+    }
+    .active, .dot:hover {
+      background-color: #4e54c8;
+    }
+    /* Footer Styles */
+    footer {
+      background: linear-gradient(135deg, #4e54c8, #8f94fb);
+      color: #fff;
+      text-align: center;
+      padding: 1.5rem 0;
+      margin-top: 2rem;
+      box-shadow: 0 -4px 10px rgba(0, 0, 0, 0.1);
+    }
+    footer p {
+      margin-bottom: 0.5rem;
+    }
+    footer a {
+      color: #fff;
+      margin: 0 10px;
+      text-decoration: none;
+    }
+    footer a:hover {
+      color:black;
+    }
+  </style>
+</head>
+<body>
+  <!-- Header -->
+  <header>
+    <div>
+      <img src="logoforbook.jpg" alt="Novel Nexus Logo">
+      <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="login.html">Login</a>
+        <a href="register.html">Register</a>
+        <div class="dropdown">
+          <a href="#" class="dropbtn">Categories</a>
+          <div class="dropdown-content">
+            <a href="fiction.html">Fiction</a>
+            <a href="non-fiction.html">Non-fiction</a>
+            <a href="historical.html">Historical</a>
+            <a href="romance.html">Romance</a>
+            <a href="horror.html">Horror</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+  </header>
+  <!-- Intro Section -->
+  <section class="intro">
+    <h1>Welcome to Novel Nexus</h1>
+    <p>Your hub for books, stories, and community. Dive into a universe of words and ideas, discover your next favorite read, and connect with fellow book lovers.</p>
+  </section>
+  <!-- Slideshow -->
+  <!-- Slideshow -->
+<div class="slideshow-container">
+    <div class="mySlides fade">
+      <a href="https://www.britannica.com/topic/The-Great-Gatsby" target="_blank">
+        <img src="book1.jpg" alt="Book 1">
+        <div class="text">"The Great Gatsby" by F. Scott Fitzgerald</div>
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://booksandbluess.co.in/2021/04/18/book-review-to-kill-a-mockingbird-harper-lee/" target="_blank">
+        <img src="book2.jpg" alt="Book 2">
+        <div class="text">"To Kill a Mockingbird" by Harper Lee</div>
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://www.theguardian.com/books/2007/jul/28/booksforchildrenandteenagers.jkjoannekathleenrowling" target="_blank">
+        <img src="book3.jpg" alt="Book 3">
+        <div class="text">"Harry Potter and the Deathly Hallows"</div>
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://kellyschuknecht.com/2023/01/31/book-review-the-5-second-rule-by-mel-robbins/" target="_blank">
+        <img src="book4.jpg" alt="Book 4">
+        <div class="text">"The 5 Second Rule" by Mel Robbins</div>
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://learningfromdogs.com/2013/07/18/traveling-light-a-book-review/" target="_blank">
+        <img src="book5.jpg" alt="Book 5">
+        <div class="text">"Traveling Light"</div>
+      </a>
+    </div>
+    <div class="mySlides fade">
+      <a href="https://schoolsweek.co.uk/the-art-of-explanation-how-to-communicate-with-clarity-and-confidence/" target="_blank">
+        <img src="book6.jpg" alt="Book 6">
+        <div class="text">"The Art Of Explanation"</div>
+      </a>
+      </div> 
+  </div>
+  <div class="dot-container">
+    <span class="dot" onclick="currentSlide(1)"></span>
+    <span class="dot" onclick="currentSlide(2)"></span>
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span>
+    <span class="dot" onclick="currentSlide(5)"></span>
+    <span class="dot" onclick="currentSlide(6)"></span>
+  </div>
+  <section class="site-description">
+    <h2>Discover, Connect, and Inspire</h2>
+    <p>Novel Nexus is your one-stop platform for discovering new books, connecting with fellow readers, and sharing insights. Whether you're a casual reader or a passionate bookworm, our community welcomes you to explore and grow.</p>
+  </section>
+  <!-- Footer -->
+  <footer>
+    <p>&copy; 2024 Novel Nexus. All rights reserved.</p>
+    <div>
+      <a href="privacy-policy.html">Privacy Policy</a> |
+      <a href="terms-of-service.html">Terms of Service</a> |
+      <a href="contact.html">Contact Us</a> |
+      <a href="faq.html">FAQ</a>
+    </div>
+    <div style="margin-top: 10px;">
+      <p>Follow us on:</p>
+      <a href="https://facebook.com" target="_blank">Facebook</a> |
+      <a href="https://twitter.com" target="_blank">Twitter</a> |
+      <a href="https://instagram.com" target="_blank">Instagram</a>
+    </div>
+  </footer>
+  <!-- Slider Script -->
+  <script>
+    let slideIndex = 0;
+    showSlides();
+    function showSlides() {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+      }
+      slideIndex++;
+      if (slideIndex > slides.length) { slideIndex = 1 }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex - 1].style.display = "block";
+      dots[slideIndex - 1].className += " active";
+      setTimeout(showSlides, 4000); // Change image every 4 seconds
+    }
+  </script>
+</body>
+</html>

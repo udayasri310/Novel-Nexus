@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Romance Books - Novel Nexus</title>
+  <link rel="icon" href="logoforbook.jpg" type="image/jpeg">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    a { text-decoration: none; color: #007bff; }
+    a:hover { text-decoration: underline; }
+    .btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    header {
+      background: #343a40;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .book {
+      display: flex;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .book img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+    .book-details {
+      flex: 1;
+      padding: 1rem;
+    }
+    .book-details h3 {
+      margin: 0 0 0.5rem;
+      color: #343a40;
+    }
+    .book-details p {
+      margin: 0.5rem 0;
+      color: #555;
+    }
+    .feedback-section {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>Romance Books</header>
+
+<div class="container">
+  <!-- Book 1 -->
+  <div class="book">
+    <img src="r1.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Pride and Prejudice</h3>
+      <p><strong>Summary:</strong> Written by Jane Austen, this classic follows the spirited Elizabeth Bennet as she navigates societal pressures, her family’s antics, and her complicated relationship with the enigmatic Mr. Darcy.</p>
+      <p><a href="https://www.goodreads.com/book/show/1885.Pride_and_Prejudice" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Pride and Prejudice')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 2 -->
+  <div class="book">
+    <img src="r2.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Notebook</h3>
+      <p><strong>Summary:</strong> A heartwarming story by Nicholas Sparks about Noah and Allie, whose enduring love spans decades despite life's challenges and a heartbreaking illness.</p>
+      <p><a href="https://www.goodreads.com/book/show/15931.The_Notebook" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Notebook')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 3 -->
+  <div class="book">
+    <img src="r3.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Me Before You</h3>
+      <p><strong>Summary:</strong> Jojo Moyes crafts an emotional tale of Louisa Clark, a young woman who becomes the caregiver for Will Traynor, a man paralyzed after an accident, as they form a life-changing bond.</p>
+      <p><a href="https://www.goodreads.com/book/show/17347634-me-before-you" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Me Before You')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 4 -->
+  <div class="book">
+    <img src="r4.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Outlander</h3>
+      <p><strong>Summary:</strong> Diana Gabaldon's time-traveling romance follows Claire Randall, who finds herself torn between two men and two centuries, blending history with epic love.</p>
+      <p><a href="https://www.goodreads.com/book/show/10964.Outlander" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Outlander')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 5 -->
+  <div class="book">
+    <img src="r5.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Hating Game</h3>
+      <p><strong>Summary:</strong> Sally Thorne's romantic comedy explores the tension-filled office rivalry and undeniable chemistry between Lucy Hutton and Joshua Templeman, who find themselves falling in love.</p>
+      <p><a href="https://www.goodreads.com/book/show/25883848-the-hating-game" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Hating Game')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 6 -->
+  <div class="book">
+    <img src="r6.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>It Ends With Us</h3>
+      <p><strong>Summary:</strong> Colleen Hoover's powerful novel explores the complexities of love and domestic abuse through the life of Lily Bloom, who must make tough decisions when past and present loves collide.</p>
+      <p><a href="https://www.goodreads.com/book/show/27362503-it-ends-with-us" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('It Ends With Us')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function handleFeedback(bookTitle) {
+    // Check if the user is logged in
+    const userLoggedIn = false; // Replace with actual login status logic
+    if (userLoggedIn) {
+      // Redirect to feedback form or display modal
+      alert(`Redirecting to feedback form for ${bookTitle}`);
+      window.location.href = `feedback.html?book=${encodeURIComponent(bookTitle)}`;
+    } else {
+      // Redirect to login or register page
+      alert("Please register or login to give feedback.");
+      window.location.href = "register.html";
+    }
+  }
+</script>
+
+</body>
+</html>

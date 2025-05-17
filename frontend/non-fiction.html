@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Non-Fiction Books - Novel Nexus</title>
+  <link rel="icon" href="logoforbook.jpg" type="image/jpeg">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    a { text-decoration: none; color: #007bff; }
+    a:hover { text-decoration: underline; }
+    .btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    header {
+      background: #343a40;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .book {
+      display: flex;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .book img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+    .book-details {
+      flex: 1;
+      padding: 1rem;
+    }
+    .book-details h3 {
+      margin: 0 0 0.5rem;
+      color: #343a40;
+    }
+    .book-details p {
+      margin: 0.5rem 0;
+      color: #555;
+    }
+    .feedback-section {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>Non-Fiction Books</header>
+
+<div class="container">
+  <!-- Book 1 -->
+  <div class="book">
+    <img src="b7.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Holding the Line: Women in the Great Arizona Mine Strike</h3>
+      <p><strong>Summary:</strong> This book by Barbara Kingsolver chronicles the stories of women involved in the 1983 copper mine strike in Arizona. The author, a freelance reporter at the time, highlights the struggles and resilience of these women during a pivotal moment in labor history.</p>
+      <p><a href="https://www.londonreviewbookshop.co.uk/stock/holding-the-line-women-in-the-great-arizona-mine-strike-barbara-kingsolver" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Holding the Line: Women in the Great Arizona Mine Strike')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 2 -->
+  <div class="book">
+    <img src="b8.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Selling Sexy: Victoria’s Secret and the Unraveling of an American Icon</h3>
+      <p><strong>Summary:</strong> Authors Lauren Sherman and Chantal Fernandez delve into the rise and fall of the Victoria’s Secret brand, exploring its iconic fashion shows, the controversies it faced, and its place in modern fashion culture.</p>
+      <p><a href="https://app.thestorygraph.com/book_reviews/ada28af5-d78a-4ba1-893b-debe2ed128ef" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Selling Sexy: Victoria’s Secret and the Unraveling of an American Icon')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 3 -->
+  <div class="book">
+    <img src="b9.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Filterworld</h3>
+      <p><strong>Summary:</strong> Kyle Chayka explores how digital algorithms shape physical spaces and influence consumer behavior, revealing how uniform aesthetics have come to dominate the real world, from coffee shops to Airbnbs.</p>
+      <p><a href="https://eustaciatan.com/2024/04/book-review-filterworld-by-kyle-chayka.html" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Filterworld')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 4 -->
+  <div class="book">
+    <img src="b10.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Garden Against Time</h3>
+      <p><strong>Summary:</strong> Olivia Laing's lyrical exploration of her garden restoration project blends personal reflection with a broader meditation on the cultural and historical significance of gardens, offering a healing respite from the pandemic.</p>
+      <p><a href="https://www.theguardian.com/books/2024/sep/21/the-haunted-wood-a-history-of-childhood-reading-by-sam-leith-review-young-at-heart" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Garden Against Time')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 5 -->
+  <div class="book">
+    <img src="b11.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Lasting Harm</h3>
+      <p><strong>Summary:</strong> Lucia Osborne-Crowley provides a harrowing account of the 2021 Ghislaine Maxwell trial, blending journalistic insights with personal reflections as a survivor of sexual abuse, offering a piercing look at justice and trauma.</p>
+      <p><a href="https://www.theguardian.com/books/2024/apr/28/the-garden-against-time-by-olivia-laing-review-in-search-of-a-common-paradise-fragrant-story-of-the-authors-eden-project" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Lasting Harm')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 6 -->
+  <div class="book">
+    <img src="b12.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Haunted Wood: A History of Childhood Reading</h3>
+      <p><strong>Summary:</strong> Sam Leith takes readers on a journey through British children's literature, examining the authors, stories, and motifs that have shaped our childhood imaginations, as well as the often tragic lives behind the books.</p>
+      <p><a href="https://www.allenandunwin.com/browse/books/9781761066566" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Haunted Wood: A History of Childhood Reading')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+</div>
+
+<script>
+  function handleFeedback(bookTitle) {
+    // Check if the user is logged in
+    const userLoggedIn = false; // Replace with actual login status logic
+    if (userLoggedIn) {
+      // Redirect to feedback form or display modal
+      alert(`Redirecting to feedback form for ${bookTitle}`);
+      window.location.href = `feedback.html?book=${encodeURIComponent(bookTitle)}`;
+    } else {
+      // Redirect to login or register page
+      alert("Please register or login to give feedback.");
+      window.location.href = "register.html";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>User Profile - Online Book Club</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <header>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="bookClub.html">Book Clubs</a>
+    </nav>
+  </header>
+
+  <main>
+    <div class="profile-container">
+      <h1>Your Profile</h1>
+      <div class="profile-details">
+        <h2>Personal Information</h2>
+        <p><strong>Name:</strong> John Doe</p>
+        <p><strong>Email:</strong> johndoe@example.com</p>
+        <p><strong>Joined On:</strong> January 1, 2023</p>
+        
+        <h2>My Book Clubs</h2>
+        <ul>
+          <li><a href="#">Sci-Fi Book Club</a> - Member</li>
+          <li><a href="#">Fantasy Book Club</a> - Moderator</li>
+        </ul>
+
+        <h2>Books I've Read</h2>
+        <ul>
+          <li><a href="#">Dune by Frank Herbert</a></li>
+          <li><a href="#">The Hobbit by J.R.R. Tolkien</a></li>
+          <li><a href="#">1984 by George Orwell</a></li>
+        </ul>
+      </div>
+
+      <div class="profile-actions">
+        <button id="editProfile" class="button">Edit Profile</button>
+        <button id="logout" class="button">Logout</button>
+      </div>
+    </div>
+    <script>
+        // frontend/js/app.js (this is in profile.html or any other page)
+if (!localStorage.getItem('token')) {
+  window.location.href = 'login.html'; // Redirect to login page if no token found
+}
+
+        </script>
+  </main>
+
+  <footer>
+    <p>&copy; 2024 Online Book Club. All rights reserved.</p>
+  </footer>
+
+  <script src="js/app.js"></script>
+</body>
+</html>

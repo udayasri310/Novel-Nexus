@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Horror Books - Novel Nexus</title>
+  <link rel="icon" href="logoforbook.jpg" type="image/jpeg">
+  <style>
+    /* General Styles */
+    body {
+      font-family: 'Arial', sans-serif;
+      background: #f8f9fa;
+      margin: 0;
+      padding: 0;
+      color: #333;
+    }
+    a { text-decoration: none; color: #007bff; }
+    a:hover { text-decoration: underline; }
+    .btn {
+      padding: 10px 20px;
+      background: #007bff;
+      color: white;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 0.9rem;
+    }
+    .btn:hover {
+      background: #0056b3;
+    }
+    header {
+      background: #343a40;
+      color: white;
+      padding: 1rem;
+      text-align: center;
+      font-size: 1.5rem;
+    }
+    .container {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 1rem;
+    }
+    .book {
+      display: flex;
+      background: white;
+      border: 1px solid #ddd;
+      border-radius: 8px;
+      margin-bottom: 1rem;
+      overflow: hidden;
+      box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    }
+    .book img {
+      width: 200px;
+      height: auto;
+      object-fit: cover;
+    }
+    .book-details {
+      flex: 1;
+      padding: 1rem;
+    }
+    .book-details h3 {
+      margin: 0 0 0.5rem;
+      color: #343a40;
+    }
+    .book-details p {
+      margin: 0.5rem 0;
+      color: #555;
+    }
+    .feedback-section {
+      margin-top: 1rem;
+    }
+  </style>
+</head>
+<body>
+
+<header>Horror Books</header>
+
+<div class="container">
+  <!-- Book 1 -->
+  <div class="book">
+    <img src="h1.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Shining</h3>
+      <p><strong>Summary:</strong> Stephen King’s classic psychological horror novel follows Jack Torrance, a writer and recovering alcoholic, as he takes a job as the caretaker of the isolated Overlook Hotel. As winter traps him and his family, supernatural forces manipulate Jack's sanity, leading to terrifying consequences.</p>
+      <p><a href="https://www.stephenking.com/library/novel/shining_the.html" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Shining')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 2 -->
+  <div class="book">
+    <img src="h2.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>Mexican Gothic</h3>
+      <p><strong>Summary:</strong> Silvia Moreno-Garcia crafts a chilling story about Noemí Taboada, a young woman who visits her cousin’s eerie mansion in 1950s Mexico. As she uncovers the house's dark secrets, she must confront horrors both supernatural and human.</p>
+      <p><a href="https://www.penguinrandomhouse.com/books/624917/mexican-gothic-by-silvia-moreno-garcia/" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('Mexican Gothic')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 3 -->
+  <div class="book">
+    <img src="h3.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>House of Leaves</h3>
+      <p><strong>Summary:</strong> Mark Z. Danielewski’s experimental horror novel follows a family discovering that their new house is larger on the inside than it is on the outside. As they delve deeper, they face an unsettling labyrinth and growing madness.</p>
+      <p><a href="https://www.penguinrandomhouse.com/books/40440/house-of-leaves-by-mark-z-danielewski/" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('House of Leaves')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 4 -->
+  <div class="book">
+    <img src="h4.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Haunting of Hill House</h3>
+      <p><strong>Summary:</strong> Shirley Jackson’s classic novel is a psychological horror masterpiece. It tells the story of four people drawn to Hill House, a place with a dark past, where unsettling events force them to question reality and their own minds.</p>
+      <p><a href="https://www.penguinrandomhouse.com/books/314325/the-haunting-of-hill-house-by-shirley-jackson/" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Haunting of Hill House')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 5 -->
+  <div class="book">
+    <img src="h5.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Only Good Indians</h3>
+      <p><strong>Summary:</strong> Stephen Graham Jones blends horror with social commentary, focusing on four Native American friends haunted by an event from their youth. The novel explores themes of cultural identity, guilt, and a vengeful supernatural force.</p>
+      <p><a href="https://www.simonandschuster.com/books/The-Only-Good-Indians/Stephen-Graham-Jones/9781982136457" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Only Good Indians')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+
+  <!-- Book 6 -->
+  <div class="book">
+    <img src="h6.jpg" alt="Book Cover">
+    <div class="book-details">
+      <h3>The Exorcist</h3>
+      <p><strong>Summary:</strong> William Peter Blatty’s iconic novel follows the possession of a young girl and the desperate attempts of her mother and two priests to save her. It’s a chilling exploration of faith, evil, and the supernatural.</p>
+      <p><a href="https://www.harpercollins.com/products/the-exorcist-william-peter-blatty" target="_blank">Read Preview</a></p>
+      <div class="feedback-section">
+        <button class="btn" onclick="handleFeedback('The Exorcist')">Give Feedback</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script>
+  function handleFeedback(bookTitle) {
+    // Check if the user is logged in
+    const userLoggedIn = false; // Replace with actual login status logic
+    if (userLoggedIn) {
+      // Redirect to feedback form or display modal
+      alert(`Redirecting to feedback form for ${bookTitle}`);
+      window.location.href = `feedback.html?book=${encodeURIComponent(bookTitle)}`;
+    } else {
+      // Redirect to login or register page
+      alert("Please register or login to give feedback.");
+      window.location.href = "register.html";
+    }
+  }
+</script>
+
+</body>
+</html>

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Novel Nexus - Register</title>
+  <link rel="stylesheet" href="css/styles.css">
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      background: linear-gradient(to bottom right, #4e54c8, #8f94fb);
+      color: #fff;
+    }
+
+    .form-container {
+      background: #fff;
+      color: #333;
+      padding: 2rem;
+      border-radius: 8px;
+      box-shadow: 0 4px 20px rgba(0, 0, 0, 0.2);
+      width: 100%;
+      max-width: 400px;
+      text-align: center;
+    }
+
+    .form-container h2 {
+      margin-bottom: 1.5rem;
+      color: #4e54c8;
+    }
+
+    .form-container .form-group {
+      margin-bottom: 1.2rem;
+      text-align: left;
+    }
+
+    .form-container label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 0.5rem;
+    }
+
+    .form-container input {
+      width: 100%;
+      padding: 0.8rem;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 1rem;
+    }
+
+    .form-container input:focus {
+      border-color: #8f94fb;
+      outline: none;
+      box-shadow: 0 0 5px rgba(79, 84, 248, 0.5);
+    }
+
+    .form-container .btn {
+      background: #4e54c8;
+      color: #fff;
+      border: none;
+      padding: 0.8rem 1.5rem;
+      border-radius: 5px;
+      font-size: 1rem;
+      cursor: pointer;
+      transition: background 0.3s;
+      width: 100%;
+    }
+
+    .form-container .btn:hover {
+      background: #8f94fb;
+    }
+
+    .form-container p {
+      margin-top: 1rem;
+    }
+
+    .form-container a {
+      color: #4e54c8;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .form-container a:hover {
+      text-decoration: underline;
+    }
+
+    footer {
+      position: fixed;
+      bottom: 10px;
+      text-align: center;
+      width: 100%;
+      color: #fff;
+    }
+  </style>
+</head>
+<body>
+  <div class="form-container">
+    <h2>Register</h2>
+    <form id="register-form" method="POST">
+      <div class="form-group">
+        <label for="name">Name</label>
+        <input type="text" id="name" name="name" placeholder="Enter your name" required>
+      </div>
+      <div class="form-group">
+        <label for="email">Email</label>
+        <input type="email" id="email" name="email" placeholder="Enter your email" required>
+      </div>
+      <div class="form-group">
+        <label for="password">Password</label>
+        <input type="password" id="password" name="password" placeholder="Create a password" required>
+      </div>
+      <button type="submit" class="btn">Register</button>
+    </form>
+    <p>Already have an account? <a href="login.html">Login here</a>.</p>
+  </div>
+
+  <footer>&copy; 2024 Novel Nexus. All rights reserved.</footer>
+
+  <script>
+    document.getElementById('register-form').addEventListener('submit', async function (e) {
+      e.preventDefault();
+
+      const name = document.getElementById('name').value;
+      const email = document.getElementById('email').value;
+      const password = document.getElementById('password').value;
+
+      try {
+        const response = await fetch('http://127.0.0.1:8080/api/users/register', {
+          method: 'POST',
+          headers: { 'Content-Type': 'application/json' },
+          body: JSON.stringify({ name, email, password })
+        });
+
+        const data = await response.json();
+
+        if (response.ok) {
+          alert('Registration successful! Please log in.');
+          window.location.href = 'login.html';
+        } else {
+          alert(data.message || 'Registration failed!');
+        }
+      } catch (err) {
+        alert('Something went wrong.');
+      }
+    });
+  </script>
+</body>
+</html>
